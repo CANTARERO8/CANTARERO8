@@ -75,25 +75,6 @@
       animation: orbitalFloat 7.5s ease-in-out infinite;
     }
 
-    .orbit-dash,
-    .satellite-inner,
-    .satellite-outer {
-      transform-box: view-box;
-      transform-origin: 0 0;
-    }
-
-    .orbit-dash {
-      animation: orbitSpin 24s linear infinite;
-    }
-
-    .satellite-inner {
-      animation: orbitSpin 7s linear infinite;
-    }
-
-    .satellite-outer {
-      animation: orbitSpinReverse 5s linear infinite;
-    }
-
     .pulse-ring {
       transform-box: fill-box;
       transform-origin: center;
@@ -132,10 +113,6 @@
 
     .tech-pill rect {
       transition: fill .3s ease, stroke-opacity .3s ease;
-    }
-
-    .tech-pill.content-reveal {
-      animation-name: pillReveal;
     }
 
     @keyframes gridBreathe {
@@ -204,14 +181,6 @@
       50% { transform: translateY(-7px); }
     }
 
-    @keyframes orbitSpin {
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes orbitSpinReverse {
-      to { transform: rotate(-360deg); }
-    }
-
     @keyframes ringPulse {
       0% { transform: scale(.82); opacity: .38; }
       70%, 100% { transform: scale(1.35); opacity: 0; }
@@ -238,13 +207,8 @@
     }
 
     @keyframes contentReveal {
-      0% { opacity: 0; transform: translateY(20px) scale(.985); filter: blur(5px); }
+      0% { opacity: 0; filter: blur(5px); }
       60% { opacity: 1; }
-      100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-    }
-
-    @keyframes pillReveal {
-      0% { opacity: 0; filter: blur(4px); }
       100% { opacity: 1; filter: blur(0); }
     }
 
@@ -287,7 +251,8 @@
       }
 
       .ambient-motion,
-      .flow-path {
+      .flow-path,
+      .orbit-motion {
         display: none;
       }
     }
@@ -352,30 +317,30 @@
     <path d="M-40 394C187 321 338 471 554 379S919 247 1260 331" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity=".065" />
 
     <g class="ambient-motion" fill="none">
-      <path d="M-140 665C130 555 340 755 592 640S950 525 1340 690" stroke="url(#accent)" stroke-width="1.6" stroke-opacity=".24" stroke-dasharray="4 22">
-        <animate attributeName="stroke-dashoffset" values="0;-208" dur="10s" repeatCount="indefinite" />
-        <animate attributeName="stroke-opacity" values=".12;.34;.12" dur="7s" repeatCount="indefinite" />
+      <path d="M-140 665C130 555 340 755 592 640S950 525 1340 690" stroke="url(#accent)" stroke-width="2" stroke-opacity=".36" stroke-dasharray="4 22">
+        <animate attributeName="stroke-dashoffset" values="0;-208" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values=".2;.55;.2" dur="6s" repeatCount="indefinite" />
       </path>
-      <path d="M-120 970C155 820 365 1080 620 925S990 800 1320 980" stroke="url(#accent)" stroke-width="1.5" stroke-opacity=".2" stroke-dasharray="10 28">
-        <animate attributeName="stroke-dashoffset" values="0;228" dur="13s" repeatCount="indefinite" />
-        <animate attributeName="stroke-opacity" values=".1;.3;.1" dur="8.5s" begin="-2s" repeatCount="indefinite" />
+      <path d="M-120 970C155 820 365 1080 620 925S990 800 1320 980" stroke="url(#accent)" stroke-width="1.9" stroke-opacity=".32" stroke-dasharray="10 28">
+        <animate attributeName="stroke-dashoffset" values="0;228" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values=".16;.46;.16" dur="7s" begin="-2s" repeatCount="indefinite" />
       </path>
-      <path d="M-160 1285C120 1165 395 1410 665 1255S1010 1160 1360 1320" stroke="url(#accent)" stroke-width="1.4" stroke-opacity=".22" stroke-dasharray="3 18">
-        <animate attributeName="stroke-dashoffset" values="0;-190" dur="9s" repeatCount="indefinite" />
-        <animate attributeName="stroke-opacity" values=".1;.28;.1" dur="6.5s" begin="-1s" repeatCount="indefinite" />
+      <path d="M-160 1285C120 1165 395 1410 665 1255S1010 1160 1360 1320" stroke="url(#accent)" stroke-width="1.9" stroke-opacity=".34" stroke-dasharray="3 18">
+        <animate attributeName="stroke-dashoffset" values="0;-190" dur="7.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values=".18;.5;.18" dur="5.5s" begin="-1s" repeatCount="indefinite" />
       </path>
 
-      <circle r="5" fill="#db2777" filter="url(#softGlow)">
-        <animateMotion path="M-140 665C130 555 340 755 592 640S950 525 1340 690" dur="11s" repeatCount="indefinite" />
-        <animate attributeName="r" values="3.5;6;3.5" dur="3s" repeatCount="indefinite" />
+      <circle r="6" fill="#db2777" filter="url(#softGlow)">
+        <animateMotion path="M-140 665C130 555 340 755 592 640S950 525 1340 690" dur="9s" repeatCount="indefinite" />
+        <animate attributeName="r" values="5;7.5;5" dur="3s" repeatCount="indefinite" />
       </circle>
-      <circle r="4" fill="#06b6d4" filter="url(#softGlow)">
-        <animateMotion path="M-120 970C155 820 365 1080 620 925S990 800 1320 980" dur="14s" begin="-5s" repeatCount="indefinite" />
+      <circle r="6" fill="#06b6d4" filter="url(#softGlow)">
+        <animateMotion path="M-120 970C155 820 365 1080 620 925S990 800 1320 980" dur="10s" begin="-4s" repeatCount="indefinite" />
         <animate attributeName="opacity" values=".45;1;.45" dur="4s" repeatCount="indefinite" />
       </circle>
-      <circle r="4.5" fill="#7c3aed" filter="url(#softGlow)">
-        <animateMotion path="M-160 1285C120 1165 395 1410 665 1255S1010 1160 1360 1320" dur="12s" begin="-7s" repeatCount="indefinite" />
-        <animate attributeName="r" values="3;5.5;3" dur="3.6s" repeatCount="indefinite" />
+      <circle r="6" fill="#7c3aed" filter="url(#softGlow)">
+        <animateMotion path="M-160 1285C120 1165 395 1410 665 1255S1010 1160 1360 1320" dur="8.5s" begin="-5s" repeatCount="indefinite" />
+        <animate attributeName="r" values="4.5;7;4.5" dur="3.6s" repeatCount="indefinite" />
       </circle>
     </g>
 
@@ -393,16 +358,18 @@
       <g class="orbital-system">
         <circle r="112" fill="none" stroke="#ffffff" stroke-opacity=".065" />
         <circle class="pulse-ring" r="58" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity=".36" />
-        <circle class="orbit-dash" r="82" fill="none" stroke="url(#accent)" stroke-opacity=".38" stroke-dasharray="9 13" />
+        <g class="orbit-motion">
+          <circle r="82" fill="none" stroke="url(#accent)" stroke-opacity=".48" stroke-dasharray="9 13">
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite" />
+          </circle>
+          <circle r="8" fill="#db2777" filter="url(#softGlow)">
+            <animateMotion dur="6.5s" repeatCount="indefinite" path="M0,-82 A82,82 0 1,1 -1,-82" />
+          </circle>
+          <circle r="5" fill="#06b6d4" filter="url(#softGlow)">
+            <animateMotion dur="4.8s" repeatCount="indefinite" path="M0,-112 A112,112 0 1,0 1,-112" />
+          </circle>
+        </g>
         <circle r="50" fill="#0a0913" stroke="#8b5cf6" stroke-opacity=".48" />
-
-        <g class="satellite-inner">
-          <circle cy="-82" r="8" fill="#db2777" filter="url(#softGlow)" />
-        </g>
-        <g class="satellite-outer">
-          <circle cy="-112" r="5" fill="#06b6d4" filter="url(#softGlow)" />
-        </g>
-
         <path class="check-mark" d="M-18 5l12 12 27-31" fill="none" stroke="url(#accent)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
       </g>
       <text class="text-reveal orbit-label" x="0" y="145" fill="#8290a7" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="4">BUILD • REFINE • SHIP</text>
