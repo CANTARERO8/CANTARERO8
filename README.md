@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-overview-animated.svg" width="100%" alt="Eduardo Córdova — Creative Frontend and Full-Stack Developer" />
+  <img src="./assets/profile-overview-tech-animated.svg" width="100%" alt="Eduardo Córdova — Creative Frontend and Full-Stack Developer" />
 </p>
 
 <details>
