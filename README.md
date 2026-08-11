@@ -41,12 +41,9 @@
 
 ## ✦ Project background
 
-My experience includes **administrative and operational systems**, **marketplaces and e-commerce**, **customer portals**, **photography and fitness platforms**, **healthcare and logistics tools**, and **creative websites with motion and 3D**.
+My experience includes **administrative and operational systems**, **marketplaces and e-commerce**, **customer portals**, **photography and fitness platforms**, **healthcare, logistics and equipment-maintenance tools**, and **creative websites with motion and 3D**.
 
-These projects involve areas such as inventory, sales, purchasing, users and permissions, dashboards, real-time data, cloud services, payments and digital content delivery.
-
-- **BANCO_SANGRE:** institutional management platform for inventory, purchasing, accounting, treasury, human resources, assets, budgeting, sales and reporting.
-- **CEMED:** medical equipment management and maintenance platform with work orders, appraisals, costs, assets, inventory and administrative operations.
+These projects involve inventory, sales, purchasing, accounting, treasury, human resources, budgets, assets, work orders, maintenance, appraisals, users and permissions, dashboards, real-time data, cloud services, payments and digital content delivery.
 
 ---
 
