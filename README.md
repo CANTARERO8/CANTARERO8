@@ -45,6 +45,9 @@ My experience includes **administrative and operational systems**, **marketplace
 
 These projects involve areas such as inventory, sales, purchasing, users and permissions, dashboards, real-time data, cloud services, payments and digital content delivery.
 
+- **BANCO_SANGRE:** institutional management platform for inventory, purchasing, accounting, treasury, human resources, assets, budgeting, sales and reporting.
+- **CEMED:** medical equipment management and maintenance platform with work orders, appraisals, costs, assets, inventory and administrative operations.
+
 ---
 
 ## ✦ Technologies
